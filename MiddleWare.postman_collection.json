@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "b6d5eeeb-96ad-44e1-918f-e5cdc1888803",
+		"name": "MiddleWare",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21003423"
+	},
+	"item": [
+		{
+			"name": "Time",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Date",
+						"value": "<calculated when request is sent>",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/time",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"time"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Legacy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Date",
+						"value": "<calculated when request is sent>",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/legacy",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"legacy"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
