@@ -16,14 +16,15 @@ import java.time.LocalDateTime;
 @Component
 public class APILoggingInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        request.setAttribute("Date", LocalDateTime.now().toString());
+
         String userAgent=(String)request.getHeader("User-Agent");
         if(!(userAgent==null)){
             System.out.println("User-Agent= "+userAgent);
-            return true;
         }
-        throw new Exception("User Agent attribute not found");
-
+        else{
+            System.out.println("User_Agent not found!");
+        }
+        return true;
     }
 
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, @Nullable ModelAndView modelAndView) throws Exception {

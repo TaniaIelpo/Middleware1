@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import java.time.LocalDateTime;
 
 /**
  * @author Tania Ielpo
@@ -19,8 +20,8 @@ public class BasicController {
     @Autowired
     private TimeService timeService;
     @GetMapping("")
-    public String getTime(HttpServletRequest request){
-        return (String) request.getAttribute("Date");
+    public String getTime(){
+        return LocalDateTime.now().toString();
      //   return timeService.getTime();
     }
 }
